@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 from aiohttp.web import Application, Request, RouteTableDef, json_response, run_app
 
@@ -17,4 +19,4 @@ app = Application()
 app['crypto'] = crypto.Crypto(password=os.getenv('pw'))
 app.add_routes(routes)
 
-run_app(app, host='0.0.0.0', port=8080)
+run_app(app, host='0.0.0.0', port=80)

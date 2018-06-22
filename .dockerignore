@@ -1,0 +1,16 @@
+.git
+.gitignore
+.dockerfiles
+Jenkinsfile
+.DS_Store
+config
+.dockerignore
+.travs.yml
+
+.cache
+build
+dist
+*.egg-info
+*.egg
+*.swp
+**/__pycache__
