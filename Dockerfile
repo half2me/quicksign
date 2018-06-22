@@ -1,9 +1,9 @@
 FROM ubuntu:rolling
 
-ADD . /root
+ADD . .
 
 RUN apt update && apt install -y \
-  nodejs \
+  npm \
   python3-pip
 
 RUN pip3 install -e . && rm -rf .cache
