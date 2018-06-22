@@ -10,7 +10,7 @@ RUN apt update && apt install -y \
 
 RUN pip3 install -e . && rm -rf .cache
 RUN npm install
-RUN npm run webpack
+RUN npm run production
 
 EXPOSE 80
 CMD ["./main.py"]

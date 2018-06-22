@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickSign</title>
+</head>
+<body>
+    <div id="app">
+        <section>
+            <b-field label="Input Data">
+                <b-input v-model="signable" @input="sign"></b-input>
+            </b-field>
+            <b-field label="Signature">
+                <b-input maxlength="400" type="textarea" v-model="signature" readonly></b-input>
+            </b-field>
+        </section>
+    </div>
+    <script src="/app.js.gz"></script>
+</body>
+</html>
