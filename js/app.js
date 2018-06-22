@@ -7,8 +7,6 @@ Vue.use(Buefy, {
     defaultIconPack: "fas"
 });
 
-Vue.config.productionTip = false;
-
 let application = new Vue({
     el: '#app',
 

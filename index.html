@@ -8,7 +8,7 @@
     <div id="app">
         <section>
             <b-field label="Input Data">
-                <b-input v-model="signable" @input="sign"></b-input>
+                <b-input maxlength="400" type="textarea" v-model="signable" @input="sign"></b-input>
             </b-field>
             <b-field label="Signature">
                 <b-input maxlength="400" type="textarea" v-model="signature" readonly></b-input>
