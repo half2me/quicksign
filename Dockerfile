@@ -3,7 +3,8 @@ FROM ubuntu:rolling
 ADD . /root
 
 RUN apt update && apt install -y \
-  node
+  nodejs \
+  python3-pip
 
 RUN pip3 install -e . && rm -rf .cache
 RUN npm install
