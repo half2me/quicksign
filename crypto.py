@@ -7,9 +7,9 @@ from cryptography.hazmat.primitives.serialization import load_pem_private_key
 
 
 class Crypto:
-    def __init__(self, key='signkey.pem', password=None):
+    def __init__(self, key, password=None):
         p = bytes(password, 'utf-8') if password is not None else None
-        with open(key, 'rb') as f:
+        with open('private/' + key, 'rb') as f:
             self.key = load_pem_private_key(f.read(), password=p, backend=default_backend())
 
     """ Returns signature in base64 encoded DER format"""

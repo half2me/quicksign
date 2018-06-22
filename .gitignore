@@ -13,8 +13,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-# private key
-signkey.pem
+# private
+private/
 
 
 # Python

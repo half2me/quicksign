@@ -21,7 +21,7 @@ async def sign(request: Request):
 
 
 app = Application()
-app['crypto'] = crypto.Crypto(password=os.getenv('pw'))
+app['crypto'] = crypto.Crypto(key=os.getenv('keyfile', 'signkey.pem'), password=os.getenv('pw'))
 
 app.add_routes(routes)
 app.router.add_static('/', path='static', name='static')
