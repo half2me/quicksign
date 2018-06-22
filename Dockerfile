@@ -1,5 +1,7 @@
 FROM ubuntu:rolling
 
+WORKDIR /root
+
 ADD . .
 
 RUN apt update && apt install -y \
