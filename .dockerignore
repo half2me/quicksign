@@ -1,11 +1,10 @@
 .git
 .gitignore
-.dockerfiles
-Jenkinsfile
 .DS_Store
 config
 .dockerignore
 .travs.yml
+Dockerfile
 
 .cache
 build
