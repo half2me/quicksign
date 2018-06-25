@@ -2,20 +2,20 @@
 
 > Sign Data Quickly
 
-## Build Setup
+## Use with docker
 
 ``` bash
-# install dependencies
-npm install
+# Pull the built docker image
+docker pull halftome/quicksign
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+# make sure your private key is in a separate directory to mount into the docker container
+docker run -it --env pw=yourkeypassword --env keyfile=nameofyourkeyfile -v /pathtodirectorycontaining/privatekey:/root/private halftome/quicksign
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Or build and run it yourself
+``` bash
+pip3 install -e .
+npm install
+npm run production
+./main.py
+```

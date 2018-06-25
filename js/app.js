@@ -24,7 +24,6 @@ let application = new Vue({
             })
                 .then(r => {
                     this.signature = r.data;
-                    console.log(r.data);
                 })
                 .catch(e => console.log(e))
         },
