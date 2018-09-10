@@ -1,31 +1,12 @@
-import Vue from 'vue';
-import axios from 'axios';
-
-import Buefy from 'buefy';
+import Vue from 'vue'
+import Buefy from 'buefy'
+import 'buefy/lib/buefy.css'
+import Main from "@/Main";
 
 Vue.use(Buefy, {
     defaultIconPack: "fas"
 });
 
-let application = new Vue({
-    el: '#app',
-
-    data() {
-        return {
-            signable: '',
-            signature: '',
-        }
-    },
-
-    methods: {
-        sign() {
-            axios.post('/api/sign', {
-                data: this.signable,
-            })
-                .then(r => {
-                    this.signature = r.data;
-                })
-                .catch(e => console.log(e))
-        },
-    }
-});
+new Vue({
+  render: h => h(Main)
+}).$mount('#app');
