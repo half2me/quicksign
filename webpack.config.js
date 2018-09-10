@@ -1,12 +1,14 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
         app: './js/app.js',
     },
     output: {
-        filename: '[name].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'static')
     },
 
@@ -42,6 +44,14 @@ module.exports = {
 
     plugins: [
         new VueLoaderPlugin(),
+        new CleanWebpackPlugin(['static']),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: require('html-webpack-template'),
+            filename: '../index.html',
+            appMountId: 'app',
+            title: 'QuickSign'
+    }),
     ],
 
     resolve: {
